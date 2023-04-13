@@ -11,6 +11,7 @@
 		504ECA2A29E85610003E7847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504ECA2929E85610003E7847 /* ContentView.swift */; };
 		504ECA2C29E85613003E7847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504ECA2B29E85613003E7847 /* Assets.xcassets */; };
 		504ECA2F29E85613003E7847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504ECA2E29E85613003E7847 /* Preview Assets.xcassets */; };
+		504ECA3629E8565E003E7847 /* ColorCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504ECA3529E8565E003E7847 /* ColorCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		504ECA2929E85610003E7847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		504ECA2B29E85613003E7847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		504ECA2E29E85613003E7847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		504ECA3529E8565E003E7847 /* ColorCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				504ECA2729E85610003E7847 /* TrafficLightsSwiftUIApp.swift */,
 				504ECA2929E85610003E7847 /* ContentView.swift */,
+				504ECA3529E8565E003E7847 /* ColorCircleView.swift */,
 				504ECA2B29E85613003E7847 /* Assets.xcassets */,
 				504ECA2D29E85613003E7847 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504ECA3629E8565E003E7847 /* ColorCircleView.swift in Sources */,
 				504ECA2A29E85610003E7847 /* ContentView.swift in Sources */,
 				504ECA2829E85610003E7847 /* TrafficLightsSwiftUIApp.swift in Sources */,
 			);
