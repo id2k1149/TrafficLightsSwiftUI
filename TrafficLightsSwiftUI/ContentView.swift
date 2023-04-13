@@ -7,16 +7,40 @@
 
 import SwiftUI
 
+enum LightIs {
+    case red, yellow, green
+}
+
 struct ContentView: View {
     
-    @State var currentLight = LightIs.green
-    @State var redOpacity = 0.2
-    @State var yellowOpacity = 0.2
-    @State var greenOpacity = 0.2
-    @State var buttonTitle = "START"
+    @State private var currentLight = LightIs.green
+    
+    @State private var redOpacity = 0.2
+    @State private var yellowOpacity = 0.2
+    @State private var greenOpacity = 0.2
+    
+    @State private var buttonTitle = "START"
+    
+    private func StartButtonWasTapped() {
+        buttonTitle = "NEXT"
+        
+        switch currentLight {
+        case .red:
+            currentLight = .yellow
+            redOpacity = 0.2
+            yellowOpacity = 1
+        case .yellow:
+            currentLight = .green
+            yellowOpacity = 0.2
+            greenOpacity = 1
+        case .green:
+            currentLight = .red
+            greenOpacity = 0.2
+            redOpacity = 1
+        }
+    }
     
     var body: some View {
-        
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
@@ -39,29 +63,6 @@ struct ContentView: View {
             }
             .padding()
         }
-    }
-    
-    private func StartButtonWasTapped() {
-        buttonTitle = "NEXT"
-        
-        switch currentLight {
-        case .red:
-            currentLight = .yellow
-            redOpacity = 0.2
-            yellowOpacity = 1
-        case .yellow:
-            currentLight = .green
-            yellowOpacity = 0.2
-            greenOpacity = 1
-        case .green:
-            currentLight = .red
-            greenOpacity = 0.2
-            redOpacity = 1
-        }
-    }
-    
-    enum LightIs {
-        case red, yellow, green
     }
 }
 
