@@ -18,3 +18,9 @@ struct ColorCircleView: View {
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
     }
 }
+
+struct ColorCircleView_Previews: PreviewProvider {
+    static var previews: some View {
+        ColorCircleView(color: .red, opacity: 1)
+    }
+}

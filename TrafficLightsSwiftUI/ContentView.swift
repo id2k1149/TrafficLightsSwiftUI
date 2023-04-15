@@ -21,7 +21,7 @@ struct ContentView: View {
     
     @State private var buttonTitle = "START"
     
-    private func StartButtonWasTapped() {
+    private func startButtonWasTapped() {
         buttonTitle = "NEXT"
         
         switch currentLight {
@@ -44,22 +44,26 @@ struct ContentView: View {
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
-            VStack {
+            VStack(spacing: 16) {
                 ColorCircleView(color: .red, opacity: redOpacity)
                 ColorCircleView(color: .yellow, opacity: yellowOpacity)
                 ColorCircleView(color: .green, opacity: greenOpacity)
-
-                Button(action: { StartButtonWasTapped() }) {
-                    Text(buttonTitle)
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 56)
-                        .padding(.vertical, 8)
-                        .background(Color.blue)
-                        .clipShape(Capsule())
-                        .overlay(Capsule().stroke(Color.white, lineWidth: 4))
+                
+                // option 1
+                ButtonView(buttonTitle: buttonTitle,
+                           action: startButtonWasTapped)
+                .padding(.top, 48)
+                
+                // option 2
+                /*
+                ButtonView(buttonTitle: buttonTitle) {
+                    if buttonTitle == "START" {
+                        buttonTitle = "NEXT"
+                    }
+                    StartButtonWasTapped()
                 }
-                .padding(.top, 64)
+                .padding(.top, 48)
+                 */
             }
             .padding()
         }
